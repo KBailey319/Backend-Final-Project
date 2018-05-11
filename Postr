@@ -1,0 +1,31 @@
+const express = require("express");
+const app = express ();
+const sequelize = require("sequelize");
+const passport = require("passport");
+const FacebookStrategy = require("passport-Facebook").Strategy;
+const http = require("http");
+const fs = require("fs");
+const hostname = 'localhost';
+const port = 8080;
+app.listen('/albums', () =>{
+    console.log('Hello World');
+});
+app.set("port", process.env.PORT || 8080);
+const handlebars = require("express-handlebars").create({ defaultLayout: 'main' });
+app.engine('handlebars', handlebars.engine);
+app.set('view engine', 'handlebars');
+const stmt = db.prepare();
+app.use((require('body-parser')()));
+console.log("Enter the Biodome here");
+
+function numberOfGuests() {
+  console.log("How many people are in here?");
+  fs.readFile("Guests.txt", (err, data) => {
+    console.log(data);
+  });
+  console.log("Decent turnout?");
+}
+numberOfGuests();
+console.log("That's not very much!");
+
+

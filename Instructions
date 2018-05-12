@@ -1,0 +1,48 @@
+Final Project: Postr
+This course has exposed you to many parts that make up back-end JavaScript development with Node. In this final project, you will create a back-end application where users create a profile and post a short message on their profile.
+
+Description:
+You will create a new Node and Express application which will allow users to create a profile and log in using a username and password. Users with a profile can create Posts, containing a string message up to 140 characters. The posts made by a user can be viewed without needing to log in. The URL of the user will be localhost:8080/user/ plus the user ID. Individual posts should be able to be viewed at the URL localhost:8080/post/ plus the post ID. This application should support the four basic CRUD operation: Create, Read, Update, Delete. The application you build should have the components shown below.
+
+User
+Each User will have the following attributes and the specified data type associated with their account:
+
+ID: Int, Auto Incremented
+firstName: String
+lastName: String
+username: String
+password: String
+Post
+Each user can submit a Post. A Post contains the following attributes with the specified data type:
+
+ID: Int, Auto Incremented
+authorID: Int
+message: String
+timeStamp: DateTime
+All posts will have an authorID attribute which contains the ID of the original creator of the Post object.
+
+Each post by the author (authorized) can be updated and deleted. All users (unauthorized) can read the posts. Any requests made to view the post that has been deleted should be treated as viewing a post that does not exist.
+
+When a post is viewed using the localhost:8080/post/ link, display the ID, authorID, message, and time stamp.
+
+Passport
+Use Passport for the authentication of users. The passport-local strategy should be leveraged to allow users to authenticate using a username and password.
+
+Sequelize
+Use Sequelize to map the properties of the Post and User to the columns of the database.
+
+Tip: Be sure to frequently test the application by using the Postman. This will ensure that the code is working properly with each change.
+Requirements
+New Project: Project must be new.
+Post and User: Must properly implement the Post and User classes.
+Login: Users must be able to create and log in to the application.
+ORM: The application must implement an ORM layer between the application and the database.
+Passport-local: The application must use the passport-local strategy for authentication.
+Database: Must use a database to persist data.
+Grading
+Meets all Requirements: 50% of your grade will be based on meeting the requirements.
+Timely Submission: 25% of your grade will be based on having a complete solution on time.
+Style: 25% of your grade will be based on having legible, well-designed code.
+Be sure to save your solution, and be prepared to share it with your Instructor or Mentor during your next class, or check-in.
+
+Tip! Your Instructor or Mentor may test your program with additional inputs, so be sure to test it thoroughly with different scenarios.
